@@ -4,7 +4,7 @@ runtime:
 site:
   title: Ansible Hackathon (Dev Mode)
   url: http://localhost:3000/rhs-build-course/index.html
-  start_page: ansible-hackathon::index.adoc
+  start_page: microlab-aap-eda::index.adoc
 content:
   sources:
     - url: ../
