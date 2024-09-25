@@ -2,7 +2,7 @@
 
 Created from Red Hat Scholars [template](https://github.com/redhat-scholars/courseware-template).
 
-Guide [link](https://zaskan.github.io/microlab-aap-eda/)
+Guide [link](https://redhat-iberia.github.io/microlab-aap-eda)
 
 ## Run locally
 
