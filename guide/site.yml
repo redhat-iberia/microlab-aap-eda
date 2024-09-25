@@ -12,12 +12,12 @@ content:
     #   start_path: documentation
     - url: git@github.com:redhat-iberia/microlab-aap-eda.git
       tags: []
-      branches: [master]
+      branches: [main]
       start_path: guide/documentation
 
 asciidoc:
   attributes:
-    release-version: master
+    release-version: main
     page-pagination: true
   extensions:
     - ./lib/tab-block.js

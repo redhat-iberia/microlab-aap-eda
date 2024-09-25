@@ -3,7 +3,7 @@ name: generate-guide
 on:
   push:
     branches:
-      - master
+      - main
     paths: 
       - 'guide/**'
 env:
