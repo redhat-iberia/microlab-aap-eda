@@ -1,0 +1,12 @@
+= Bienvenidos al Ansible Hackathon
+:page-layout: home
+:!sectids:
+ifndef::lab[]
+:lab-name: Java
+endif::[]
+
+== Introducción
+
+Bienvenidos al **Hackathon** de Ansible, en el que os plantearemos dos retos para poner a prueba vuestros conocimientos de automatización mediante el uso de Ansible y Ansible Automation Platform.
+
+Para comenzar, solo teneís que estar divididos en Grupos, **quejaros a vuestros instructores si aun no lo han hecho!!**
