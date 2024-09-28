@@ -2,7 +2,7 @@ runtime:
   cache_dir: ./.cache/antora
 
 site:
-  title: Microlab AAP EDA
+  title: Summit Connect Madrid 2024 
   url: https://github.com/redhat-iberia/microlab-aap-eda
   start_page: microlab-aap-eda::index.adoc
 
@@ -29,9 +29,6 @@ ui:
     snapshot: true
   supplemental_files:
     - path: ./supplemental-ui
-    - path: .nojekyll
-    - path: ui.yml
-      contents: "static_files: [ .nojekyll ]"
 
 output:
   dir: ./gh-pages

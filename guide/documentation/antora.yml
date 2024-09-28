@@ -1,5 +1,5 @@
 name: microlab-aap-eda
-title: Summit Connect Madrid 2024 - Event-Driven Ansible MicroLab
+title: Event-Driven Ansible MicroLab
 version: master
 nav:
   - modules/ROOT/nav.adoc
