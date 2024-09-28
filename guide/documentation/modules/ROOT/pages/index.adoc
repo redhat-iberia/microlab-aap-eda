@@ -1,9 +1,6 @@
 = Bienvenidos
 :page-layout: home
 :!sectids:
-ifndef::lab[]
-:lab-name: Java
-endif::[]
 
 == Introducción
 
@@ -19,10 +16,3 @@ Para esta demostración, hemos preparado un entorno que consta de los siguientes
 - Un contenedor ejecutando Kafka (Gestion y distribución de mensajes)
 
 image::schema.png[]
-
-Para poder acceder a los diferentes sistemas, dispones de los correspondientes enlaces en la parte superior derecha de esta pantalla (Opentelemetry y Kafka no disponen de UI, por lo que no se facilita enlace)
-Las credenciales para acceder a cualquiera de los enlaces son las siguientes:
-
-Usuario: eda_minilab
-Contraseña: Summit24!
-

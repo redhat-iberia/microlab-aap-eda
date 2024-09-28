@@ -1,5 +1,14 @@
-= Configuración Inicial
+= Acceso al entorno
 :page-layout: home
 :!sectids:
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Para poder acceder a los diferentes sistemas, dispones de los correspondientes enlaces en la parte superior derecha de esta pantalla (Opentelemetry y Kafka no disponen de UI, por lo que no se facilita enlace)
+Las credenciales para acceder a cualquiera de los enlaces son las siguientes:
+
+|===
+|*Usuario* |*Contraseña* 
+
+|eda_minilab
+|Summit24!
+
+|===
