@@ -1,7 +1,12 @@
 <header class="header">
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () { 
-      document.getElementById('aap_url').href = "https://controller01-aap.apps." ;
+      document.getElementById('aap_url').href = "https://10.10.10.144" ;
+      document.getElementById('eda_url').href = "https://10.10.10.145" ;
+      document.getElementById('nginx_url').href = "https://10.10.10.146:8080" ;
+      document.getElementById('alertmanager_url').href = "https://10.10.10.146:9090/alerts" ;
+      document.getElementById('servicenow_url').href = "https://dev285928.service-now.com/now/nav/ui/classic/params/target/incident_list.do%3Fsysparm_query%3D%26sysparm_first_row%3D1%26sysparm_view%3Dess" ;
+
     }
   </script>
   <nav class="navbar">
@@ -18,6 +23,10 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" id="aap_url" href="" target="_blank">Ansible Automation Platform</a>
+        <a class="navbar-item" id="eda_url" href="" target="_blank">Event-Driven Ansible</a>
+        <a class="navbar-item" id="nginx_url" href="" target="_blank">Nginx Website</a>
+        <a class="navbar-item" id="alertmanager_url" href="" target="_blank">AlertManager</a>
+        <a class="navbar-item" id="snow_url" href="" target="_blank">ServiceNow</a>
     </div>
   </nav>
 </header>

@@ -7,8 +7,9 @@ endif::[]
 
 == Introducción
 
-Bienvenidos al microlab sobre Event-Driven Ansible. En este laboratorio vamos a ver como Event-Driven Ansible puede integrarse con diferentes sistemas para detectar y resolver problemas.
-El entorno consta de los siguientes componentes:
+Bienvenidos al microlab sobre *Event-Driven Ansible*. En este laboratorio vamos a ver como Event-Driven Ansible puede integrarse con diferentes sistemas para detectar y resolver problemas.
+
+Para esta demostración, hemos preparado un entorno que consta de los siguientes componentes:
 
 - Una instancia de control de Ansible Automation Platform (Orquestador de automatización)
 - Una instancia de Event-Driven Ansible (Gestor de eventos)
@@ -17,7 +18,7 @@ El entorno consta de los siguientes componentes:
 - Un contenedor ejecutando OpenTelemetry (Colector de datos de telemetría)
 - Un contenedor ejecutando Kafka (Gestion y distribución de mensajes)
 
-image::schema.png[width=900, height=500]
+image::schema.png[]
 
 Para poder acceder a los diferentes sistemas, dispones de los correspondientes enlaces en la parte superior derecha de esta pantalla (Opentelemetry y Kafka no disponen de UI, por lo que no se facilita enlace)
 Las credenciales para acceder a cualquiera de los enlaces son las siguientes:

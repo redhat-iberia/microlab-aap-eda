@@ -2,7 +2,7 @@ runtime:
   cache_dir: ./.cache/antora
 
 site:
-  title: Ansible Hackathon (Dev Mode)
+  title: Summit Connect Madrid 2024 - Event-Driven Ansible MicroLab
   url: http://localhost:3000/rhs-build-course/index.html
   start_page: microlab-aap-eda::index.adoc
 content:
