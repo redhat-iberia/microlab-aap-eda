@@ -21,7 +21,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://developers.redhat.com" target="_blank"><img
-          src="../_/img/RHDLogo.svg" height="40px" alt="Red Hat Developer Program"></a>
+          src="../_/img/header_logo.png" height="40px" alt="Red Hat Developer Program"></a>
       <a class="navbar-item" href="https://github.com/redhat-iberia/microlab-aap-eda">Microlab AAP EDA</a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -100,7 +100,43 @@
 <h2>Introducción</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#8217;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<p>Bienvenidos al microlab sobre Event-Driven Ansible. En este laboratorio vamos a ver como Event-Driven Ansible puede integrarse con diferentes sistemas para detectar y resolver problemas.
+El entorno consta de los siguientes componentes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Una instancia de control de Ansible Automation Platform (Orquestador de automatización)</p>
+</li>
+<li>
+<p>Una instancia de Event-Driven Ansible (Gestor de eventos)</p>
+</li>
+<li>
+<p>Un contenedor ejecutando Prometheus y Alertmanager (Monitorización y gestión de alertas)</p>
+</li>
+<li>
+<p>Un contenedor ejecutando Nginx y sirviendo un sitio web</p>
+</li>
+<li>
+<p>Un contenedor ejecutando OpenTelemetry (Colector de datos de telemetría)</p>
+</li>
+<li>
+<p>Un contenedor ejecutando Kafka (Gestion y distribución de mensajes)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="schema.png" alt="schema" width="900" height="500">
+</div>
+</div>
+<div class="paragraph">
+<p>Para poder acceder a los diferentes sistemas, dispones de los correspondientes enlaces en la parte superior derecha de esta pantalla (Opentelemetry y Kafka no disponen de UI, por lo que no se facilita enlace)
+Las credenciales para acceder a cualquiera de los enlaces son las siguientes:</p>
+</div>
+<div class="paragraph">
+<p>Usuario: eda_minilab
+Contraseña: Summit24!</p>
 </div>
 </div>
 </div>
