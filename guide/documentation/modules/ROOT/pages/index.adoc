@@ -7,4 +7,21 @@ endif::[]
 
 == Introducción
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Bienvenidos al microlab sobre Event-Driven Ansible. En este laboratorio vamos a ver como Event-Driven Ansible puede integrarse con diferentes sistemas para detectar y resolver problemas.
+El entorno consta de los siguientes componentes:
+
+- Una instancia de control de Ansible Automation Platform (Orquestador de automatización)
+- Una instancia de Event-Driven Ansible (Gestor de eventos)
+- Un contenedor ejecutando Prometheus y Alertmanager (Monitorización y gestión de alertas)
+- Un contenedor ejecutando Nginx y sirviendo un sitio web
+- Un contenedor ejecutando OpenTelemetry (Colector de datos de telemetría)
+- Un contenedor ejecutando Kafka (Gestion y distribución de mensajes)
+
+image::schema.png[width=900, height=500]
+
+Para poder acceder a los diferentes sistemas, dispones de los correspondientes enlaces en la parte superior derecha de esta pantalla (Opentelemetry y Kafka no disponen de UI, por lo que no se facilita enlace)
+Las credenciales para acceder a cualquiera de los enlaces son las siguientes:
+
+Usuario: eda_minilab
+Contraseña: Summit24!
+
