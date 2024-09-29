@@ -1,14 +1,13 @@
-= Aprobar remediación
+= Aceptar resolución
 :page-layout: home
 :!sectids:
 
-En este punto, hemos preparado un paso manual para que permitas que se lance la remediación. Desde la interfaz de Ansible Controller, observa que hay una notificación en la parte superior derecha.
+Desde la interfaz de Ansible Controller, observa que hay una notificación en la parte superior derecha.
 
 image::controller_notification.png[]
 
 Haz click sobre ella. Te enviará a la pantalla de trabajos que requiren aprobación. Autoriza el trabajo pinchando sobre el icono que muestra una mano con el dedo hacia arriba. 
 
-image::controller_approval.png[]
+image::controller_approval_2.png[]
 
-Esto desencadenará que se ejecuten los playbooks necesarios para remediar el problema y hacer que nginx sirva nuestr web de nuevo.
-Deberías poder como estos jobs se activan en la sección *jobs*. Continuemos a la siguiente sección.
+Esto desencadenará que se ejecuten los playbooks necesarios para cerrar el ticket de Servicenow.
