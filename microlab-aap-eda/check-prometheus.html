@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Summit Connect Madrid 2024</title>
+    <title>Comprobar Alertmanager :: Summit Connect Madrid 2024</title>
     <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/check-prometheus.html">
     <link rel="prev" href="check-website.html">
     <link rel="next" href="check-eda.html">
@@ -62,49 +62,49 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="explanation-firstpart.html">2.1. Detección del problema</a>
+    <a class="nav-link" href="explanation-firstpart.html">3. Detección del problema</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-nginx.html">2.1.1 Detener Nginx</a>
+    <a class="nav-link" href="stop-nginx.html">3.1. Detener Nginx</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-website.html">2.1.2 Comprobar Nginx</a>
+    <a class="nav-link" href="check-website.html">3.2. Comprobar Nginx</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="check-prometheus.html">2.1.3 Comprobar Alertmanager</a>
+    <a class="nav-link" href="check-prometheus.html">3.3. Comprobar Alertmanager</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-eda.html">2.1.4 Comprobar consola de Event-Driven Ansible</a>
+    <a class="nav-link" href="check-eda.html">3.4. Comprobar consola de Event-Driven Ansible</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-controller.html">2.1.5 Comprobar Ansible Controller</a>
+    <a class="nav-link" href="check-controller.html">3.5. Comprobar Ansible Controller</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-servicenow.html">2.1.6 Comprobar Servicenow</a>
+    <a class="nav-link" href="check-servicenow.html">3.6. Comprobar Servicenow</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="explanation-secondpart.html">2.2 Remediar el problema</a>
+    <a class="nav-link" href="explanation-secondpart.html">4. Remediar el problema</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-eda-2.html">2.2.1 Comprobar consola de Event-Driven Ansible</a>
+    <a class="nav-link" href="check-eda-2.html">4.1. Comprobar consola de Event-Driven Ansible</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="remediation-approve.html">2.2.2 Aprobar remediación</a>
+    <a class="nav-link" href="remediation-approve.html">4.2. Aprobar remediación</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-controller-2.html">2.2.3 Comprobar Ansible Controller</a>
+    <a class="nav-link" href="check-controller-2.html">4.3. Comprobar Ansible Controller</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-prometheus-2.html">2.2.4 Comprobar Alertmanager</a>
+    <a class="nav-link" href="check-prometheus-2.html">4.4. Comprobar Alertmanager</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-servicenow-2.html">2.2.5 Comprobar Servicenow</a>
+    <a class="nav-link" href="check-servicenow-2.html">4.5. Comprobar Servicenow</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-website-2.html">2.2.6 Comprobar Nginx</a>
+    <a class="nav-link" href="check-website-2.html">4.6. Comprobar Nginx</a>
   </li>
 </ul>
   </li>
@@ -123,18 +123,35 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Event-Driven Ansible MicroLab</a></li>
-    <li><a href="explanation-firstpart.html">2.1. Detección del problema</a></li>
-    <li><a href="check-prometheus.html">2.1.3 Comprobar Alertmanager</a></li>
+    <li><a href="explanation-firstpart.html">3. Detección del problema</a></li>
+    <li><a href="check-prometheus.html">3.3. Comprobar Alertmanager</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/check-prometheus.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-
+<h1 class="page">Comprobar Alertmanager</h1>
+<div class="paragraph">
+<p>Nuestra monitorización debería haber detectado el problema, y su sistema de alertas debería estar avisando de que existe un problema con nginx. Haz click en el enlace <strong>Alertmanager</strong> en la barra de enlaces de la parte superior derecha.</p>
+</div>
+<div class="paragraph">
+<p>En nuestro caso, nuestro sistema de monitorización (Prometheus) debe detectar el problema y enviar la alerta a través del componente <strong>Alertmanager</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Hemos configurado Alertmanager para que envíe todas sus alertas a una instancia de Opentelemetry, un sistema especializados en la recolección y distribución de mensajes.</p>
+</div>
+<div class="paragraph">
+<p>Opentelemetry está configurado para depositar este tipo de mensajes en una cola de mensajería para que sean consumidos y explotados. El encargado de ello es <strong>Apacha Kafka</strong>, que también está corriendo en nuestro stack. Estas colas se denominan <strong>topics</strong>.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="eda_explained.png" alt="eda explained">
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="check-website.html">2.1.2 Comprobar Nginx</a></span>
-  <span class="next"><a href="check-eda.html">2.1.4 Comprobar consola de Event-Driven Ansible</a></span>
+  <span class="prev"><a href="check-website.html">3.2. Comprobar Nginx</a></span>
+  <span class="next"><a href="check-eda.html">3.4. Comprobar consola de Event-Driven Ansible</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

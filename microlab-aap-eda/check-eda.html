@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Summit Connect Madrid 2024</title>
+    <title>Comprobar consola de Event-Driven Ansible :: Summit Connect Madrid 2024</title>
     <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/check-eda.html">
     <link rel="prev" href="check-prometheus.html">
     <link rel="next" href="check-controller.html">
@@ -62,49 +62,49 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="explanation-firstpart.html">2.1. Detección del problema</a>
+    <a class="nav-link" href="explanation-firstpart.html">3. Detección del problema</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stop-nginx.html">2.1.1 Detener Nginx</a>
+    <a class="nav-link" href="stop-nginx.html">3.1. Detener Nginx</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-website.html">2.1.2 Comprobar Nginx</a>
+    <a class="nav-link" href="check-website.html">3.2. Comprobar Nginx</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-prometheus.html">2.1.3 Comprobar Alertmanager</a>
+    <a class="nav-link" href="check-prometheus.html">3.3. Comprobar Alertmanager</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="check-eda.html">2.1.4 Comprobar consola de Event-Driven Ansible</a>
+    <a class="nav-link" href="check-eda.html">3.4. Comprobar consola de Event-Driven Ansible</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-controller.html">2.1.5 Comprobar Ansible Controller</a>
+    <a class="nav-link" href="check-controller.html">3.5. Comprobar Ansible Controller</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-servicenow.html">2.1.6 Comprobar Servicenow</a>
+    <a class="nav-link" href="check-servicenow.html">3.6. Comprobar Servicenow</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="explanation-secondpart.html">2.2 Remediar el problema</a>
+    <a class="nav-link" href="explanation-secondpart.html">4. Remediar el problema</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-eda-2.html">2.2.1 Comprobar consola de Event-Driven Ansible</a>
+    <a class="nav-link" href="check-eda-2.html">4.1. Comprobar consola de Event-Driven Ansible</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="remediation-approve.html">2.2.2 Aprobar remediación</a>
+    <a class="nav-link" href="remediation-approve.html">4.2. Aprobar remediación</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-controller-2.html">2.2.3 Comprobar Ansible Controller</a>
+    <a class="nav-link" href="check-controller-2.html">4.3. Comprobar Ansible Controller</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-prometheus-2.html">2.2.4 Comprobar Alertmanager</a>
+    <a class="nav-link" href="check-prometheus-2.html">4.4. Comprobar Alertmanager</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-servicenow-2.html">2.2.5 Comprobar Servicenow</a>
+    <a class="nav-link" href="check-servicenow-2.html">4.5. Comprobar Servicenow</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="check-website-2.html">2.2.6 Comprobar Nginx</a>
+    <a class="nav-link" href="check-website-2.html">4.6. Comprobar Nginx</a>
   </li>
 </ul>
   </li>
@@ -123,18 +123,78 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Event-Driven Ansible MicroLab</a></li>
-    <li><a href="explanation-firstpart.html">2.1. Detección del problema</a></li>
-    <li><a href="check-eda.html">2.1.4 Comprobar consola de Event-Driven Ansible</a></li>
+    <li><a href="explanation-firstpart.html">3. Detección del problema</a></li>
+    <li><a href="check-eda.html">3.4. Comprobar consola de Event-Driven Ansible</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/check-eda.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
+<h1 class="page">Comprobar consola de Event-Driven Ansible</h1>
+<div class="paragraph">
+<p>En este punto, nuestra instancia de Event-Driven Ansible ya debería de haber detectado el nuevo mensaje de alerta en el topic de kafka. Puedes acceder a ella utilizando tus credenciales y desde el enlace <strong>Event-Driven Ansible</strong> de la barra superior derecha.</p>
+</div>
+<div class="paragraph">
+<p>Event-Driven Ansible utiliza <strong>event plugins</strong> que nos ayudan a escuchar o recibir eventos desde diferentes sistemas. Para este caso de uso, estamos utilizando un event plugin que sirve para leer topics desde un topic de una instancia kafka.</p>
+</div>
+<div class="paragraph">
+<p>Una vez se detecta un evento, se aplican diferentes condiciones dependiendo de los datos recibidos y se ejecuta una acción. Estas acciones se ejecutan a través de <strong>action plugins</strong>. Diferentes acciones pueden ser: escribir un mensaje, crear una variable o por ejemplo, ejecutar un trabajo en nuestro Ansible Controller, que es lo que haremos en este caso.</p>
+</div>
+<div class="paragraph">
+<p>Este flujo, se define a través de un componente llamado <strong>Ansible Rulebook</strong> y que es ejecutado por nuestra instancia de Event-Driven Ansible como un proceso que corre de manera constante. Este fichero, se almacena en un repositorio y se descarga en nuestro controlador utilizando un proyecto. En nuestro caso, el fichero se ve mas o menos así:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">- name: Process OpenTelemetry events
+  hosts: localhost
+  sources:
+    - ansible.eda.kafka:
+        host: 10.10.10.146
+        port: 9093
+        topic: otel-events
+        security_protocol: SSL
+        cafile: /etc/ssl/certs/ca.crt
+        certfile: /etc/ssl/certs/client.crt
+        keyfile: /etc/ssl/certs/client.key
+        check_hostname: false
 
+  rules:
+    - name: Trigger remediation
+      condition: event.body != ""
+      action:
+        run_job_template:
+          name: "[JT] Parse Kafka Payload"
+          organization: eda_opentelemetry_workshop
+          job_args:
+            extra_vars:
+              kafka_message: "{{ event }}"</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La primera sección, utiliza el source plugin <strong>ansible.eda.kafka</strong> para leer el topic <strong>otel-events</strong> de una instancia de Apache Kafka específica. Se configuran una serie de certificados para hacer la conexión mas segura.</p>
+</li>
+<li>
+<p>La segunda sección <strong>rules</strong>, utilizada el plugin <strong>run_job_template</strong> para ejecutar un trabajo en nuestro Ansible Controller llamado <strong>[JT] Parse Kafka Payload</strong>. Como condición, estamos especificando que el cuerpo del mensaje recibido nunca debe estar vacío.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Este rulebook se ejecutará sobre un contenedor que contiene todo lo necesario llamado <strong>decision environment</strong> que controlamos a través de un proceso que denominamos <strong>activation job</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Puedes explorar los distintos componentes desde la interfaz de Event-Driven Ansible. Observa el log de la ejecución del rule book accediendo a <strong>Rulebook Activations / Kafka Rulebook Activation / History</strong> y pinchando sobre el job correspondiente que esté en estado "running". Puedes observar el log y si haces scroll hasta abajo, deberías ver como un evento ha sido recibido y se ha enviado la llamada al Ansible Controller.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/eda_activations.png" alt="eda activations">
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="check-prometheus.html">2.1.3 Comprobar Alertmanager</a></span>
-  <span class="next"><a href="check-controller.html">2.1.5 Comprobar Ansible Controller</a></span>
+  <span class="prev"><a href="check-prometheus.html">3.3. Comprobar Alertmanager</a></span>
+  <span class="next"><a href="check-controller.html">3.5. Comprobar Ansible Controller</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
