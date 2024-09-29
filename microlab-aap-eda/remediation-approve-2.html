@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Comprobar Servicenow :: Summit Connect Madrid 2024</title>
-    <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/check-servicenow-2.html">
-    <link rel="prev" href="check-prometheus-2.html">
-    <link rel="next" href="check-website-2.html">
+    <title>Aprobar remediación :: Summit Connect Madrid 2024</title>
+    <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/remediation-approve-2.html">
+    <link rel="prev" href="check-eda-2.html">
+    <link rel="next" href="check-controller-2.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -94,7 +94,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="check-eda-2.html">4.1. Comprobar consola de Event-Driven Ansible</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="remediation-approve-2.html">4.2. Aceptar resolución </a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -103,7 +103,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="check-prometheus-2.html">4.4. Comprobar Alertmanager</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="check-servicenow-2.html">4.5. Comprobar Servicenow</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -127,23 +127,37 @@
   <ul>
     <li><a href="index.html">Event-Driven Ansible MicroLab</a></li>
     <li><a href="explanation-secondpart.html">4. Revisión </a></li>
-    <li><a href="check-servicenow-2.html">4.5. Comprobar Servicenow</a></li>
+    <li><a href="remediation-approve-2.html">4.2. Aceptar resolución </a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/check-servicenow-2.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/remediation-approve-2.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Comprobar Servicenow</h1>
+<h1 class="page">Aprobar remediación</h1>
 <div class="paragraph">
-<p>Accede a través del enlace "Servicenow" de la barra superior derecha utilizando las credenciales dadas.</p>
+<p>En este punto, hemos preparado un paso manual para que permitas que se lance la remediación. Desde la interfaz de Ansible Controller, observa que hay una notificación en la parte superior derecha.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/controller_notification.png" alt="controller notification">
+</div>
 </div>
 <div class="paragraph">
-<p>Comprueba como el ticket ha cambiado de estado y ha sido resuelto.</p>
+<p>Haz click sobre ella. Te enviará a la pantalla de trabajos que requiren aprobación. Autoriza el trabajo pinchando sobre el icono que muestra una mano con el dedo hacia arriba.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/controller_approval.png" alt="controller approval">
+</div>
+</div>
+<div class="paragraph">
+<p>Esto desencadenará que se ejecuten los playbooks necesarios para remediar el problema y hacer que nginx sirva nuestr web de nuevo.
+Deberías poder como estos jobs se activan en la sección <strong>jobs</strong>. Continuemos a la siguiente sección.</p>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="check-prometheus-2.html">4.4. Comprobar Alertmanager</a></span>
-  <span class="next"><a href="check-website-2.html">4.6. Comprobar Nginx</a></span>
+  <span class="prev"><a href="check-eda-2.html">4.1. Comprobar consola de Event-Driven Ansible</a></span>
+  <span class="next"><a href="check-controller-2.html">4.3. Comprobar Ansible Controller</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

@@ -95,7 +95,7 @@
     <a class="nav-link" href="check-eda-2.html">4.1. Comprobar consola de Event-Driven Ansible</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="remediation-approve.html">4.2. Aprobar remediación</a>
+    <a class="nav-link" href="remediation-approve-2.html">4.2. Aceptar resolución </a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="check-controller-2.html">4.3. Comprobar Ansible Controller</a>
@@ -137,6 +137,11 @@
 <h1 class="page">Comprobar Alertmanager</h1>
 <div class="paragraph">
 <p>Nuestra monitorización basada en Prometheus, debería haber detectado la incidencia y su sistema de alertas debería estar avisando a través de su componente Alertmanager de que existe un problema con nginx. Haz click en el enlace <strong>Alertmanager</strong> en la barra de enlaces de la parte superior derecha.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/prometheus_alert_firing.png" alt="prometheus alert firing">
+</div>
 </div>
 <div class="paragraph">
 <p>Hemos configurado Alertmanager para que envíe todas sus alertas a una instancia de Opentelemetry, un sistema especializado en la recolección y distribución de mensajes.</p>
