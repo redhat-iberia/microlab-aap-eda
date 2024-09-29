@@ -4,6 +4,8 @@
 
 Nuestra monitorización basada en Prometheus, debería haber detectado la incidencia y su sistema de alertas debería estar avisando a través de su componente Alertmanager de que existe un problema con nginx. Haz click en el enlace *Alertmanager* en la barra de enlaces de la parte superior derecha.
 
+image::prometheus_alert_firing.png[]
+
 Hemos configurado Alertmanager para que envíe todas sus alertas a una instancia de Opentelemetry, un sistema especializado en la recolección y distribución de mensajes.
 
 Opentelemetry está configurado para depositar este tipo de mensajes en una cola de mensajería para que sean consumidos y explotados. De ello se encarga *Apacha Kafka*, que también está corriendo en nuestro stack. Estas colas se denominan *topics*.

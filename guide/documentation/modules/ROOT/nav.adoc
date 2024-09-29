@@ -11,7 +11,7 @@
 ** xref:remediation-approve.adoc[3.7. Aprobar remediación]
 * xref:explanation-secondpart.adoc[4. Revisión ]
 ** xref:check-eda-2.adoc[4.1. Comprobar consola de Event-Driven Ansible]
-** xref:remediation-approve.adoc[4.2. Aprobar remediación]
+** xref:remediation-approve-2.adoc[4.2. Aceptar resolución ]
 ** xref:check-controller-2.adoc[4.3. Comprobar Ansible Controller]
 ** xref:check-prometheus-2.adoc[4.4. Comprobar Alertmanager]
 ** xref:check-servicenow-2.adoc[4.5. Comprobar Servicenow]
