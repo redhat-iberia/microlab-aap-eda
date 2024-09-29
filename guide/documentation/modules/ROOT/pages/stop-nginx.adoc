@@ -6,7 +6,7 @@ Comencemos deteniendo el contenedor de Nginx. Como la máquina en la que corre e
 
 Para ello, haremos lo siguiente:
 
-* Accede a la interfaz del Ansible Controller (utiliza el link en la parte superior izquierda), con el usuario y contraseña proporcionados anteriormente
+* Accede a la interfaz de *Ansible Automation Platform Controller* (utiliza el link en la parte superior derecha), con el usuario y contraseña proporcionados anteriormente
 
 image::controller_login.png[]
 
