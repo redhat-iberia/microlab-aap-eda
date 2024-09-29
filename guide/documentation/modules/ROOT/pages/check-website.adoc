@@ -2,5 +2,7 @@
 :page-layout: home
 :!sectids:
 
-Si todo ha ido bien, nuestro sitio web debería estar sirviendo un error. Accede a la url a través de el link *Sitio Web* de la parte superior derecha y compruebalo tu mismo.
+Si todo ha ido bien, nuestro sitio web debería estar sirviendo un error.
+
+Accede a la url a través de el link *Sitio Web* de la parte superior derecha y compruebalo tu mismo.
 
