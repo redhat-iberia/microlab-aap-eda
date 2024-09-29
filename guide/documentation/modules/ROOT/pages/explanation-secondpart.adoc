@@ -2,6 +2,6 @@
 :page-layout: home
 :!sectids:
 
-Ya hemos visto como nuestro stack es capaz de detectar e informar de problemas. En esta segunda parte vamos a ver como remediar dichos problemas.
+Ya hemos visto como nuestro stack es capaz de detectar, informar y remediar problemas. 
 
-Recuerda que hemos introducido puntos de control manuales para hacer mas fácil el seguimiento del lab, pero que en un entorno real, todo se puede hacer de manera completamente automática.
+Vamos a revisar que todo se ha ejecutado de manera correcta.

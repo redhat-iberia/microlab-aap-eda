@@ -1,0 +1,9 @@
+= Comprobar Alertmanager
+:page-layout: home
+:!sectids:
+
+Nuestra monitorización debería haber detectado que el problema está resuelto y debería mostrar el estado correcto.
+
+Haz click en el enlace *Alertmanager* en la barra de enlaces de la parte superior derecha y accede a alertmanager para comprobarlo.
+
+image::prometheus_alert.png[]
