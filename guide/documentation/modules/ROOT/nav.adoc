@@ -16,3 +16,4 @@
 ** xref:check-prometheus-2.adoc[4.4. Comprobar Alertmanager]
 ** xref:check-servicenow-2.adoc[4.5. Comprobar Servicenow]
 ** xref:check-website-2.adoc[4.6. Comprobar Nginx]
+* xref:summary.adoc[5. Resumen ]
