@@ -4,6 +4,9 @@
 
 == Introducción
 
-Bienvenidos al microlab sobre *Event-Driven Ansible*. En este laboratorio vamos a ver como Event-Driven Ansible puede integrarse con diferentes sistemas para detectar y resolver problemas.
+Bienvenidos al microlab sobre *Event-Driven Ansible*. 
+
+En este laboratorio vamos a ver como Event-Driven Ansible puede integrarse con diferentes sistemas para detectar y resolver problemas.
+
 Esperamos que disfrutes y que sirva para mostrar el valor y todo lo que puede aportar Event-Driven Ansible a tu stack tecnológico.
 

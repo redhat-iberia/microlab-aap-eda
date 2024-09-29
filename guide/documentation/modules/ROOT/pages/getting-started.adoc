@@ -14,4 +14,4 @@ Para la demostración, hemos preparado un entorno que consta de los siguientes c
 - Un contenedor ejecutando OpenTelemetry (Colector de datos de telemetría)
 - Un contenedor ejecutando Kafka (Gestion y distribución de mensajes)
 
-image::schema.png[]
+image::eda_explained.png[]

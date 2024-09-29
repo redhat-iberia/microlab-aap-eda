@@ -1,0 +1,13 @@
+= Comprobar Ansible Controller
+:page-layout: home
+:!sectids:
+
+Ahora, una serie de trabajos deberían estar haber sido invocados por Event-Driven Ansible y deberían estar corriendo en nuestro Ansible Controller.
+
+Accede a través del enlace "Ansible Automation Platform Controller" de la barra superior derecha.
+
+Una vez dentro, haz click en *jobs*. Deberías ver algo similar a la siguiente imágen:
+
+image::controller_remediation.png[]
+
+Ansible Controller ha recibido la petición y ha ejecutado un workflow con la información aportada. Este workflow, abrirá un ticket en Servicenow para informar del problema e intentará solucionarlo.  
