@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Summit Connect Madrid 2024</title>
+    <title>Comprobar consola de Event-Driven Ansible :: Summit Connect Madrid 2024</title>
     <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/check-eda-2.html">
     <link rel="prev" href="explanation-secondpart.html">
     <link rel="next" href="remediation-approve.html">
@@ -131,7 +131,18 @@
   </div>
   <div class="content">
 <article class="doc">
-
+<h1 class="page">Comprobar consola de Event-Driven Ansible</h1>
+<div class="paragraph">
+<p>Al levantar nginx de nuevo, alertmanager debería haber informado de que todo está correcto.</p>
+</div>
+<div class="paragraph">
+<p>Observa el log de la ejecución del rule book accediendo a <strong>Rulebook Activations / Kafka Rulebook Activation / History</strong> y pinchando sobre el job correspondiente que esté en estado "running". Puedes observar el log y si haces scroll hasta abajo, deberías ver como un nuevo evento ha sido recibido y se ha enviado la llamada al Ansible Controller.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/eda_activations.png" alt="eda activations">
+</div>
+</div>
 <nav class="pagination">
   <span class="prev"><a href="explanation-secondpart.html">4. Remediar el problema</a></span>
   <span class="next"><a href="remediation-approve.html">4.2. Aprobar remediación</a></span>
