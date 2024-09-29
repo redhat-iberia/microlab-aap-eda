@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Acceso al entorno :: Summit Connect Madrid 2024</title>
-    <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/user-configuration.html">
-    <link rel="prev" href="getting-started.html">
-    <link rel="next" href="explanation-firstpart.html">
+    <title>Detener Nginx :: Summit Connect Madrid 2024</title>
+    <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/stop-nginx.html">
+    <link rel="prev" href="explanation-firstpart.html">
+    <link rel="next" href="check-website.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -57,14 +57,14 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="getting-started.html">1. Comencemos</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="user-configuration.html">2. Acceso al entorno</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="explanation-firstpart.html">2.1. Detección del problema</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="stop-nginx.html">2.1.1 Detener Nginx</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -123,39 +123,91 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Event-Driven Ansible MicroLab</a></li>
-    <li><a href="user-configuration.html">2. Acceso al entorno</a></li>
+    <li><a href="explanation-firstpart.html">2.1. Detección del problema</a></li>
+    <li><a href="stop-nginx.html">2.1.1 Detener Nginx</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/user-configuration.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/stop-nginx.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Acceso al entorno</h1>
+<h1 class="page">Detener Nginx</h1>
 <div class="paragraph">
-<p>Para poder acceder a los diferentes sistemas, dispones de los correspondientes enlaces en la parte superior derecha de esta pantalla (Opentelemetry y Kafka no disponen de UI, por lo que no se facilita enlace)
-Las credenciales para acceder a cualquiera de los enlaces son las siguientes:</p>
+<p>Comencemos deteniendo el contenedor de Nginx. Como la máquina en la que corre contenedor, es un host gestionado por Ansible y forma parte de uno de sus inventarios, podemos ejecutar el comando de manera muy sencilla desde la interfaz nuestro controlador de Ansible.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Usuario</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Contraseña</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">eda_minilab</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Summit24!</p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>Para ello, haremos lo siguiente:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Accede a la interfaz del Ansible Controller (utiliza el link en la parte superior izquierda), con el usuario y contraseña proporcionados anteriormente</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/controller_login.png" alt="controller login">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Haz click en <strong>Inventories / Opentelemetry Inventory / Hosts</strong>. Una vez aquí, selecciona el host <strong>nginx</strong> y haz click en <strong>Run Command</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/controller_command_1.png" alt="controller command 1">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>En el siguiente diálogo, selecciona el módulo <strong>command</strong> desde el desplegable <strong>Module</strong>. Añade el comando a ejecutar en el host <strong>podman stop nginx</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/controller_command_2.png" alt="controller command 2">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Selecciona el execution environment desde el cual lanzarás el comando. En este caso utilizarás <strong>Default execution environment</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/controller_command_3.png" alt="controller command 3">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ahora selecciona la credencial para poder conectar al host por ssh y así lanzar el comando. La credencial correcta es <strong>OpenTelemetry Managed Host Credential</strong></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/controller_command_4.png" alt="controller command 4">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Y por último, haz click en launch. Esto debería ejecutar el comando y devolver una salida <strong>rc=0</strong>, que significa que el comando se lanzó de manera correcta.</p>
+</li>
+</ul>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="getting-started.html">1. Comencemos</a></span>
-  <span class="next"><a href="explanation-firstpart.html">2.1. Detección del problema</a></span>
+  <span class="prev"><a href="explanation-firstpart.html">2.1. Detección del problema</a></span>
+  <span class="next"><a href="check-website.html">2.1.2 Comprobar Nginx</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

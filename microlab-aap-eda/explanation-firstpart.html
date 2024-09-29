@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Acceso al entorno :: Summit Connect Madrid 2024</title>
-    <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/user-configuration.html">
-    <link rel="prev" href="getting-started.html">
-    <link rel="next" href="explanation-firstpart.html">
+    <title>Detección del problema :: Summit Connect Madrid 2024</title>
+    <link rel="canonical" href="https://github.com/redhat-iberia/microlab-aap-eda/microlab-aap-eda/explanation-firstpart.html">
+    <link rel="prev" href="user-configuration.html">
+    <link rel="next" href="stop-nginx.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
@@ -57,10 +57,10 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="getting-started.html">1. Comencemos</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="user-configuration.html">2. Acceso al entorno</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="explanation-firstpart.html">2.1. Detección del problema</a>
 <ul class="nav-list">
@@ -123,39 +123,29 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Event-Driven Ansible MicroLab</a></li>
-    <li><a href="user-configuration.html">2. Acceso al entorno</a></li>
+    <li><a href="explanation-firstpart.html">2.1. Detección del problema</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/user-configuration.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/redhat-iberia/microlab-aap-eda/edit/main/guide/documentation/modules/ROOT/pages/explanation-firstpart.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Acceso al entorno</h1>
+<h1 class="page">Detección del problema</h1>
 <div class="paragraph">
-<p>Para poder acceder a los diferentes sistemas, dispones de los correspondientes enlaces en la parte superior derecha de esta pantalla (Opentelemetry y Kafka no disponen de UI, por lo que no se facilita enlace)
-Las credenciales para acceder a cualquiera de los enlaces son las siguientes:</p>
+<p>En esta primera parte, provocaremos un problema en nuestro sitio web que hará que nuestra solución reaccione e intente remediarlo y reportarlo.</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Usuario</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Contraseña</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">eda_minilab</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Summit24!</p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>Para ello, vamos a detener el contenedor <strong>nginx</strong> que está sirviendo una página web que muestra el funcionamiento del laboratorio.</p>
+</div>
+<div class="paragraph">
+<p>Una vez detenido, deberíamos poder ver como el resto de componentes reaccionan para solucionar el problema lo antes posible.</p>
+</div>
+<div class="paragraph">
+<p>Para facilitar la visualización de todo lo que sucede y hacer mas fácil que no te pierdas nada, hemos introducido varios puntos de control manuales que relentizan el proceso para darte  tiempo a navegar por los diferentes componentes y observar los distintos estados.</p>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="getting-started.html">1. Comencemos</a></span>
-  <span class="next"><a href="explanation-firstpart.html">2.1. Detección del problema</a></span>
+  <span class="prev"><a href="user-configuration.html">2. Acceso al entorno</a></span>
+  <span class="next"><a href="stop-nginx.html">2.1.1 Detener Nginx</a></span>
 </nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
