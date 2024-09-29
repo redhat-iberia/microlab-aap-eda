@@ -133,16 +133,21 @@
 <article class="doc">
 <h1 class="page">Comprobar consola de Event-Driven Ansible</h1>
 <div class="paragraph">
-<p>En este punto, nuestra instancia de Event-Driven Ansible ya debería de haber detectado el nuevo mensaje de alerta en el topic de kafka. Puedes acceder a ella utilizando tus credenciales y desde el enlace <strong>Event-Driven Ansible</strong> de la barra superior derecha.</p>
+<p>En este punto, nuestra instancia de Event-Driven Ansible ya debería de haber detectado el nuevo mensaje de alerta en el topic de kafka.</p>
 </div>
 <div class="paragraph">
-<p>Event-Driven Ansible utiliza <strong>event plugins</strong> que nos ayudan a escuchar o recibir eventos desde diferentes sistemas. Para este caso de uso, estamos utilizando un event plugin que sirve para leer topics desde un topic de una instancia kafka.</p>
+<p>Puedes acceder a ella utilizando tus credenciales y desde el enlace <strong>Event-Driven Ansible</strong> de la barra superior derecha.</p>
 </div>
 <div class="paragraph">
-<p>Una vez se detecta un evento, se aplican diferentes condiciones dependiendo de los datos recibidos y se ejecuta una acción. Estas acciones se ejecutan a través de <strong>action plugins</strong>. Diferentes acciones pueden ser: escribir un mensaje, crear una variable o por ejemplo, ejecutar un trabajo en nuestro Ansible Controller, que es lo que haremos en este caso.</p>
+<p>Event-Driven Ansible utiliza <strong>event plugins</strong> que nos ayudan a escuchar o recibir eventos desde diferentes sistemas. Para este caso de uso, estamos utilizando un event plugin que sirve para leer mensajes desde un topic de una instancia kafka.</p>
 </div>
 <div class="paragraph">
-<p>Este flujo, se define a través de un componente llamado <strong>Ansible Rulebook</strong> y que es ejecutado por nuestra instancia de Event-Driven Ansible como un proceso que corre de manera constante. Este fichero, se almacena en un repositorio y se descarga en nuestro controlador utilizando un proyecto. En nuestro caso, el fichero se ve mas o menos así:</p>
+<p>Una vez se detecta un evento, se aplican diferentes condiciones dependiendo de los datos recibidos y se ejecuta una acción. Estas acciones se ejecutan a través de <strong>action plugins</strong>.
+Diferentes acciones pueden ser: escribir un mensaje, crear una variable o por ejemplo, ejecutar un trabajo en nuestro Ansible Controller, que es lo que haremos en este caso.</p>
+</div>
+<div class="paragraph">
+<p>Este flujo, se define a través de un componente llamado <strong>Ansible Rulebook</strong> y que es ejecutado por nuestra instancia de Event-Driven Ansible como un proceso que corre de manera constante. Este fichero, se almacena en un repositorio y se descarga en nuestro controlador utilizando un proyecto.
+En nuestro caso, el fichero se ve mas o menos así:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -150,7 +155,7 @@
   hosts: localhost
   sources:
     - ansible.eda.kafka:
-        host: 10.10.10.146
+        host: kafka01.summitconnect.local
         port: 9093
         topic: otel-events
         security_protocol: SSL
@@ -174,7 +179,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>La primera sección, utiliza el source plugin <strong>ansible.eda.kafka</strong> para leer el topic <strong>otel-events</strong> de una instancia de Apache Kafka específica. Se configuran una serie de certificados para hacer la conexión mas segura.</p>
+<p>La primera sección <strong>sources</strong>, utiliza el source plugin <strong>ansible.eda.kafka</strong> para leer el topic <strong>otel-events</strong> de una instancia de Apache Kafka específica. Se configuran una serie de certificados para hacer la conexión mas segura.</p>
 </li>
 <li>
 <p>La segunda sección <strong>rules</strong>, utilizada el plugin <strong>run_job_template</strong> para ejecutar un trabajo en nuestro Ansible Controller llamado <strong>[JT] Parse Kafka Payload</strong>. Como condición, estamos especificando que el cuerpo del mensaje recibido nunca debe estar vacío.</p>
@@ -182,14 +187,20 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>Este rulebook se ejecutará sobre un contenedor que contiene todo lo necesario llamado <strong>decision environment</strong> que controlamos a través de un proceso que denominamos <strong>activation job</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Puedes explorar los distintos componentes desde la interfaz de Event-Driven Ansible. Observa el log de la ejecución del rule book accediendo a <strong>Rulebook Activations / Kafka Rulebook Activation / History</strong> y pinchando sobre el job correspondiente que esté en estado "running". Puedes observar el log y si haces scroll hasta abajo, deberías ver como un evento ha sido recibido y se ha enviado la llamada al Ansible Controller.</p>
+<p>Este rulebook se ejecutará sobre un contenedor que contiene todo lo necesario llamado <strong>decision environment</strong>, que controlamos a través de un proceso que denominamos <strong>activation job</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="_images/eda_activations.png" alt="eda activations">
+</div>
+</div>
+<div class="paragraph">
+<p>Puedes explorar los distintos componentes desde la interfaz de Event-Driven Ansible. Observa el log de la ejecución del rule book accediendo a <strong>Rulebook Activations / Kafka Rulebook Activation / History</strong> y pinchando sobre el job correspondiente que esté en estado "running".
+Puedes observar el log y si haces scroll hasta abajo, deberías ver como un evento ha sido recibido y se ha enviado una llamada al Ansible Controller.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/eda_activations_log.png" alt="eda activations log">
 </div>
 </div>
 <nav class="pagination">

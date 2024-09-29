@@ -133,16 +133,13 @@
 <article class="doc">
 <h1 class="page">Comprobar Alertmanager</h1>
 <div class="paragraph">
-<p>Nuestra monitorización debería haber detectado el problema, y su sistema de alertas debería estar avisando de que existe un problema con nginx. Haz click en el enlace <strong>Alertmanager</strong> en la barra de enlaces de la parte superior derecha.</p>
+<p>Nuestra monitorización basada en Prometheus, debería haber detectado la incidencia y su sistema de alertas debería estar avisando a través de su componente Alertmanager de que existe un problema con nginx. Haz click en el enlace <strong>Alertmanager</strong> en la barra de enlaces de la parte superior derecha.</p>
 </div>
 <div class="paragraph">
-<p>En nuestro caso, nuestro sistema de monitorización (Prometheus) debe detectar el problema y enviar la alerta a través del componente <strong>Alertmanager</strong>.</p>
+<p>Hemos configurado Alertmanager para que envíe todas sus alertas a una instancia de Opentelemetry, un sistema especializado en la recolección y distribución de mensajes.</p>
 </div>
 <div class="paragraph">
-<p>Hemos configurado Alertmanager para que envíe todas sus alertas a una instancia de Opentelemetry, un sistema especializados en la recolección y distribución de mensajes.</p>
-</div>
-<div class="paragraph">
-<p>Opentelemetry está configurado para depositar este tipo de mensajes en una cola de mensajería para que sean consumidos y explotados. El encargado de ello es <strong>Apacha Kafka</strong>, que también está corriendo en nuestro stack. Estas colas se denominan <strong>topics</strong>.</p>
+<p>Opentelemetry está configurado para depositar este tipo de mensajes en una cola de mensajería para que sean consumidos y explotados. De ello se encarga <strong>Apacha Kafka</strong>, que también está corriendo en nuestro stack. Estas colas se denominan <strong>topics</strong>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
