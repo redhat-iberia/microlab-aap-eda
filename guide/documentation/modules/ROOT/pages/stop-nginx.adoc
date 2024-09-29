@@ -2,7 +2,7 @@
 :page-layout: home
 :!sectids:
 
-Comencemos deteniendo el contenedor de Nginx. Como la máquina en la que corre contenedor, es un host gestionado por Ansible y forma parte de uno de sus inventarios, podemos ejecutar el comando de manera muy sencilla desde la interfaz nuestro controlador de Ansible. 
+Comencemos deteniendo el contenedor de Nginx. Como la máquina en la que corre el contenedor es un host gestionado por Ansible y forma parte de uno de sus inventarios, podemos ejecutar el comando de manera muy sencilla desde la interfaz nuestro controlador de Ansible. 
 
 Para ello, haremos lo siguiente:
 

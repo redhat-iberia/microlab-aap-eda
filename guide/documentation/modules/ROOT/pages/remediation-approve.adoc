@@ -6,10 +6,9 @@ En este punto, hemos preparado un paso manual para que permitas que se lance la 
 
 image::controller_notification.png[]
 
-
-Haz click sobre ella. Te enviará a la pantalla de trabajos que requiren aprobación. Autoriza el trabajo pinchando sobre el icono que muestra una mano con el dedo hacia arriba
-
+Haz click sobre ella. Te enviará a la pantalla de trabajos que requiren aprobación. Autoriza el trabajo pinchando sobre el icono que muestra una mano con el dedo hacia arriba. 
 
 image::controller_approval.png[]
 
-En este punto, deberías ver como otros jobs se activan en la sección *jobs*. Continuemos a la siguiente sección.
+Esto desencadenará que se ejecuten los playbooks necesarios para remediar el problema y hacer que nginx sirva nuestr web de nuevo.
+Deberías poder como estos jobs se activan en la sección *jobs*. Continuemos a la siguiente sección.
