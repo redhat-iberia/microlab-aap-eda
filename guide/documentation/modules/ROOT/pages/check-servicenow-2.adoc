@@ -2,7 +2,7 @@
 :page-layout: home
 :!sectids:
 
-Accede a través del enlace "Servicenow" de la barra superior derecha utilizando las credenciales dadas.
+Accede a través del enlace *Servicenow* de la barra superior derecha utilizando las credenciales dadas.
 
 Comprueba como el ticket ha cambiado de estado y ha sido resuelto.
 

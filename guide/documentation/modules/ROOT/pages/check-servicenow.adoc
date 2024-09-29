@@ -2,7 +2,7 @@
 :page-layout: home
 :!sectids:
 
-Accede a través del enlace "Servicenow" de la barra superior derecha utilizando las credenciales dadas.
+Accede a través del enlace *Servicenow* de la barra superior derecha utilizando las credenciales dadas.
 
 Comprueba como se ha abierto el ticket que informa del problema.
 
