@@ -1,0 +1,33 @@
+= Detener Nginx
+:page-layout: home
+:!sectids:
+
+Comencemos deteniendo el contenedor de Nginx. Como la máquina en la que corre contenedor, es un host gestionado por Ansible y forma parte de uno de sus inventarios, podemos ejecutar el comando de manera muy sencilla desde la interfaz nuestro controlador de Ansible. 
+
+Para ello, haremos lo siguiente:
+
+* Accede a la interfaz del Ansible Controller (utiliza el link en la parte superior izquierda), con el usuario y contraseña proporcionados anteriormente
+
+image::controller_login.png[]
+
+* Haz click en *Inventories / Opentelemetry Inventory / Hosts*. Una vez aquí, selecciona el host *nginx* y haz click en *Run Command*
+
+image::controller_command_1.png[]
+
+* En el siguiente diálogo, selecciona el módulo *command* desde el desplegable *Module*. Añade el comando a ejecutar en el host *podman stop nginx*.
+
+image::controller_command_2.png[]
+
+* Selecciona el execution environment desde el cual lanzarás el comando. En este caso utilizarás *Default execution environment*.
+
+image::controller_command_3.png[]
+
+* Ahora selecciona la credencial para poder conectar al host por ssh y así lanzar el comando. La credencial correcta es *OpenTelemetry Managed Host Credential*
+
+image::controller_command_4.png[]
+
+* Y por último, haz click en launch. Esto debería ejecutar el comando y devolver una salida *rc=0*, que significa que el comando se lanzó de manera correcta.
+
+
+
+

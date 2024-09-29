@@ -1,0 +1,11 @@
+= Detección del problema
+:page-layout: home
+:!sectids:
+
+En esta primera parte, provocaremos un problema en nuestro sitio web que hará que nuestra solución reaccione e intente remediarlo y reportarlo.
+
+Para ello, vamos a detener el contenedor *nginx* que está sirviendo una página web que muestra el funcionamiento del laboratorio.
+
+Una vez detenido, deberíamos poder ver como el resto de componentes reaccionan para solucionar el problema lo antes posible. 
+
+Para facilitar la visualización de todo lo que sucede y hacer mas fácil que no te pierdas nada, hemos introducido varios puntos de control manuales que relentizan el proceso para darte  tiempo a navegar por los diferentes componentes y observar los distintos estados.

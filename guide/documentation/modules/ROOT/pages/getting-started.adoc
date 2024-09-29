@@ -1,0 +1,17 @@
+= Comencemos
+:page-layout: home
+:!sectids:
+
+El objetivo de este sencillo microlab, es mostrar como Event-Driven Ansible puede trabajar de manera conjunta con diferentes sistemas para detectar eventos y tomar decisiones en base a una información dada.
+El caso de uso es sencillo, vamos a provocar un problema para que sea detectado por nuestro stack y podamos gestionarlo de la manera mas eficiente posible.
+
+Para la demostración, hemos preparado un entorno que consta de los siguientes componentes:
+
+- Una instancia de control de Ansible Automation Platform (Orquestador de automatización)
+- Una instancia de Event-Driven Ansible (Gestor de eventos)
+- Un contenedor ejecutando Prometheus y Alertmanager (Monitorización y gestión de alertas)
+- Un contenedor ejecutando Nginx y sirviendo un sitio web
+- Un contenedor ejecutando OpenTelemetry (Colector de datos de telemetría)
+- Un contenedor ejecutando Kafka (Gestion y distribución de mensajes)
+
+image::schema.png[]
