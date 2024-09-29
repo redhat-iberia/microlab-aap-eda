@@ -1,0 +1,13 @@
+= Resumen
+:page-layout: home
+:!sectids:
+
+Y esto es todo. En este microlab hemos visto:
+
+* Cómo funcionan los *event plugins* y permiten su integración con diversos componentes
+* Como podemos tomar decisiones y disparar automatizaciones utilizando los *action plugins* 
+* Como podemos integrar todo esto en un *Ansible Rulebook*, y crear sistemas autónomos que reaccionen y tomen decisiones dependiendo de los eventos recibidos
+
+Esperamos que hayas disfrutado de este microlab y que sigas disfrutando del resto de los contenidos de este Red Hat Summit Connect 24
+
+Hasta pronto!
