@@ -9,7 +9,7 @@ Las credenciales para acceder a cualquiera de los enlaces son las siguientes:
 |===
 |*Usuario* |*Contraseña* 
 
-|eda_minilab
+|user3
 |Summit24!
 
 |===
