@@ -175,8 +175,31 @@
 </div>
 </div>
 <div class="paragraph">
-<p>Esto desencadenará que se ejecuten los playbooks necesarios para remediar el problema y hacer que nginx sirva nuestr web de nuevo.
-Deberías poder como estos jobs se activan en la sección <strong>jobs</strong>. Continuemos a la siguiente sección.</p>
+<p>Esto desencadenará que se ejecuten los playbooks necesarios para remediar el problema y hacer que nginx sirva nuestra web de nuevo.
+Deberías poder como estos jobs se activan en la sección <strong>jobs</strong> del Ansible Controller.</p>
+</div>
+<div class="paragraph">
+<p>El playbook que se ejecutará es muy sencillo, únicamente levanta el contenedor de nginx y sirve la web de nuevo.</p>
+</div>
+<div class="paragraph">
+<p><sub>~</sub>
+---
+- name: Trigger Remediation
+  hosts: all
+  gather_facts: false
+  tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>name: Trigger Remediation
+      ansible.builtin.command: podman start nginx
+<sub>~</sub></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Continua a la siguiente sección.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="check-servicenow.html" class="query-params-link">3.6. Comprobar Servicenow</a></span>

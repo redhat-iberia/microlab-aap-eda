@@ -162,13 +162,13 @@
 <p>En este punto, nuestra instancia de Event-Driven Ansible ya debería de haber detectado el nuevo mensaje de alerta en el topic de kafka.</p>
 </div>
 <div class="paragraph">
-<p>Puedes acceder a ella utilizando tus credenciales y desde el enlace <strong>Event-Driven Ansible</strong> de la barra superior derecha.</p>
+<p>Puedes acceder a ella utilizando tus credenciales y desde el enlace <a href="https://aap24-eda01.sc24.workshops">Event-Driven Ansible</a>.</p>
 </div>
 <div class="paragraph">
 <p>Event-Driven Ansible utiliza <strong>event plugins</strong> que nos ayudan a escuchar o recibir eventos desde diferentes sistemas. Para este caso de uso, estamos utilizando un event plugin que sirve para leer mensajes desde un topic de una instancia kafka.</p>
 </div>
 <div class="paragraph">
-<p>Una vez se detecta un evento, se aplican diferentes condiciones dependiendo de los datos recibidos y se ejecuta una acción. Estas acciones se ejecutan a través de <strong>action plugins</strong>.
+<p>Una vez se detecta un evento, se aplican diferentes condiciones dependiendo de los datos recibidos y se ejecuta una acción. Estas acciones se ejecutan a través de los <strong>action plugins</strong>.
 Diferentes acciones pueden ser: escribir un mensaje, crear una variable o por ejemplo, ejecutar un trabajo en nuestro Ansible Controller, que es lo que haremos en este caso.</p>
 </div>
 <div class="paragraph">
@@ -221,7 +221,7 @@ En nuestro caso, el fichero se ve mas o menos así:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Puedes explorar los distintos componentes desde la interfaz de Event-Driven Ansible. Observa el log de la ejecución del rule book accediendo a <strong>Rulebook Activations / Kafka Rulebook Activation / History</strong> y pinchando sobre el job correspondiente que esté en estado "running".
+<p>Puedes explorar los distintos componentes desde la interfaz de Event-Driven Ansible. Observa el log de la ejecución del rulebook accediendo a <strong>Rulebook Activations / Kafka Rulebook Activation / History</strong> y pinchando sobre el job correspondiente que esté en estado "running".
 Puedes observar el log y si haces scroll hasta abajo, deberías ver como un evento ha sido recibido y se ha enviado una llamada al Ansible Controller.</p>
 </div>
 <div class="imageblock">
