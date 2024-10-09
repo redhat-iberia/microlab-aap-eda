@@ -181,22 +181,16 @@ Deberías poder como estos jobs se activan en la sección <strong>jobs</strong> 
 <div class="paragraph">
 <p>El playbook que se ejecutará es muy sencillo, únicamente levanta el contenedor de nginx y sirve la web de nuevo.</p>
 </div>
-<div class="paragraph">
-<p><sub>~</sub>
----
-- name: Trigger Remediation
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">- name: Trigger Remediation
   hosts: all
   gather_facts: false
-  tasks:</p>
+  tasks:
+
+    - name: Trigger Remediation
+      ansible.builtin.command: podman start nginx</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>name: Trigger Remediation
-      ansible.builtin.command: podman start nginx
-<sub>~</sub></p>
-</li>
-</ul>
 </div>
 <div class="paragraph">
 <p>Continua a la siguiente sección.</p>
