@@ -15,8 +15,7 @@ Deberías poder como estos jobs se activan en la sección *jobs* del Ansible Con
 
 El playbook que se ejecutará es muy sencillo, únicamente levanta el contenedor de nginx y sirve la web de nuevo.
 
-~~~
----
+```
 - name: Trigger Remediation
   hosts: all
   gather_facts: false
@@ -24,6 +23,6 @@ El playbook que se ejecutará es muy sencillo, únicamente levanta el contenedor
 
     - name: Trigger Remediation
       ansible.builtin.command: podman start nginx
-~~~
+```
 
 Continua a la siguiente sección.
