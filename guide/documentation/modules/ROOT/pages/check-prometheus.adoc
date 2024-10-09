@@ -2,7 +2,7 @@
 :page-layout: home
 :!sectids:
 
-Nuestra monitorización basada en Prometheus, debería haber detectado la incidencia y su sistema de alertas debería estar avisando a través de su componente Alertmanager de que existe un problema con nginx. Haz click en el enlace *Alertmanager* en la barra de enlaces de la parte superior derecha.
+Nuestra monitorización basada en Prometheus, debe detectar la incidencia y su sistema de alertas debería estar avisando a través de su componente Alertmanager de que existe un problema con nginx. Haz click en el enlace link:http://aap24-opentelemetry01.sc24.workshops:9090/alerts[Alertmanager].
 
 image::prometheus_alert_firing.png[]
 

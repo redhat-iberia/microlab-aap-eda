@@ -4,6 +4,6 @@
 
 Nuestra monitorización debería haber detectado que el problema está resuelto y debería mostrar el estado correcto.
 
-Haz click en el enlace *Alertmanager* en la barra de enlaces de la parte superior derecha y accede a alertmanager para comprobarlo.
+Observa que Alertmanager ahora muestra un estado correcto.
 
 image::prometheus_alert.png[]

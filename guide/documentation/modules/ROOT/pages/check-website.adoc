@@ -2,7 +2,7 @@
 :page-layout: home
 :!sectids:
 
-Si todo ha ido bien, nuestro sitio web debería estar sirviendo un error.
+Si todo ha ido bien, nuestro sitio web debería estar caído y sirviendo un error.
 
-Accede a la url a través de el link *Sitio Web* de la parte superior derecha y compruebalo tu mismo.
+Accede a la url a través del link link:http://aap24-opentelemetry01.sc24.workshops:8080[Sitio Web] y compruebalo tu mismo.
 

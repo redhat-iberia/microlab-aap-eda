@@ -4,8 +4,6 @@
 
 Ahora, una serie de trabajos deberían estar haber sido invocados por Event-Driven Ansible y deberían estar corriendo en nuestro Ansible Controller.
 
-Accede a través del enlace "Ansible Automation Platform Controller" de la barra superior derecha.
-
 Una vez dentro, haz click en *jobs*. Deberías ver algo similar a la siguiente imágen:
 
 image::controller_final.png[]

@@ -4,7 +4,7 @@
 
 Ahora, una serie de trabajos deberían estar haber sido invocados por Event-Driven Ansible y deberían estar corriendo en nuestro Ansible Controller.
 
-Accede a través del enlace "Ansible Automation Platform Controller" de la barra superior derecha.
+Accede a través del enlace link:https://aap24-controller01.sc24.workshops[Ansible Automation Platform Controller].
 
 Una vez dentro, haz click en *jobs*. Deberías ver algo similar a la siguiente imágen:
 

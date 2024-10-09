@@ -10,5 +10,20 @@ Haz click sobre ella. Te enviará a la pantalla de trabajos que requiren aprobac
 
 image::controller_approval.png[]
 
-Esto desencadenará que se ejecuten los playbooks necesarios para remediar el problema y hacer que nginx sirva nuestr web de nuevo.
-Deberías poder como estos jobs se activan en la sección *jobs*. Continuemos a la siguiente sección.
+Esto desencadenará que se ejecuten los playbooks necesarios para remediar el problema y hacer que nginx sirva nuestra web de nuevo.
+Deberías poder como estos jobs se activan en la sección *jobs* del Ansible Controller.
+
+El playbook que se ejecutará es muy sencillo, únicamente levanta el contenedor de nginx y sirve la web de nuevo.
+
+~~~
+---
+- name: Trigger Remediation
+  hosts: all
+  gather_facts: false
+  tasks:
+
+    - name: Trigger Remediation
+      ansible.builtin.command: podman start nginx
+~~~
+
+Continua a la siguiente sección.

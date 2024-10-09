@@ -2,11 +2,13 @@
 :page-layout: home
 :!sectids:
 
+Tam y como hemos descrito, estamos sirviendo una aplicación web a través de un contenedor de nginx. Accede a la url a través de el link link:http://aap24-opentelemetry01.sc24.workshops:8080[Sitio Web] de la parte superior derecha y compruebalo tu mismo. 
+
 Comencemos deteniendo el contenedor de Nginx. Como la máquina en la que corre el contenedor es un host gestionado por Ansible y forma parte de uno de sus inventarios, podemos ejecutar el comando de manera muy sencilla desde la interfaz nuestro controlador de Ansible. 
 
 Para ello, haremos lo siguiente:
 
-* Accede a la interfaz de *Ansible Automation Platform Controller* (utiliza el link en la parte superior derecha), con el usuario y contraseña proporcionados anteriormente
+* Accede a la interfaz de link:https://aap24-controller01.sc24.workshops/[Ansible Automation Platform Controller], con el usuario y contraseña proporcionados anteriormente
 
 image::controller_login.png[]
 

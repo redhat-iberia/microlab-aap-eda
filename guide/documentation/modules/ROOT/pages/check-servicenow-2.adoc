@@ -2,7 +2,7 @@
 :page-layout: home
 :!sectids:
 
-Accede a través del enlace *Servicenow* de la barra superior derecha utilizando las credenciales dadas.
+Accede a Servicenow de nuevo y observa el ticket creado anteriormente.
 
 Comprueba como el ticket ha cambiado de estado y ha sido resuelto.
 

@@ -2,9 +2,13 @@
 :page-layout: home
 :!sectids:
 
-Accede a través del enlace *Servicenow* de la barra superior derecha utilizando las credenciales dadas.
+Accede a través del enlace link:https://dev285928.service-now.com/now/nav/ui/classic/params/target/incident_list.do%3Fsysparm_query%3D%26sysparm_first_row%3D1%26sysparm_view%3Dess[Servicenow].
 
-Comprueba como se ha abierto el ticket que informa del problema.
+Comprueba que se ha abierto el ticket que informa del problema.
 
 image::servicenow_incident.png[]
+
+Haz click en el numero de ticket para ver el detalle.
+
+image::ticket_detail.png[]
 

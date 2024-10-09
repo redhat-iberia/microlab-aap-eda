@@ -4,11 +4,11 @@
 
 En este punto, nuestra instancia de Event-Driven Ansible ya debería de haber detectado el nuevo mensaje de alerta en el topic de kafka. 
 
-Puedes acceder a ella utilizando tus credenciales y desde el enlace *Event-Driven Ansible* de la barra superior derecha.
+Puedes acceder a ella utilizando tus credenciales y desde el enlace link:https://aap24-eda01.sc24.workshops[Event-Driven Ansible].
 
 Event-Driven Ansible utiliza *event plugins* que nos ayudan a escuchar o recibir eventos desde diferentes sistemas. Para este caso de uso, estamos utilizando un event plugin que sirve para leer mensajes desde un topic de una instancia kafka.
 
-Una vez se detecta un evento, se aplican diferentes condiciones dependiendo de los datos recibidos y se ejecuta una acción. Estas acciones se ejecutan a través de *action plugins*. 
+Una vez se detecta un evento, se aplican diferentes condiciones dependiendo de los datos recibidos y se ejecuta una acción. Estas acciones se ejecutan a través de los *action plugins*. 
 Diferentes acciones pueden ser: escribir un mensaje, crear una variable o por ejemplo, ejecutar un trabajo en nuestro Ansible Controller, que es lo que haremos en este caso.
 
 Este flujo, se define a través de un componente llamado *Ansible Rulebook* y que es ejecutado por nuestra instancia de Event-Driven Ansible como un proceso que corre de manera constante. Este fichero, se almacena en un repositorio y se descarga en nuestro controlador utilizando un proyecto. 
@@ -47,7 +47,7 @@ Este rulebook se ejecutará sobre un contenedor que contiene todo lo necesario l
 
 image::eda_activations.png[]
 
-Puedes explorar los distintos componentes desde la interfaz de Event-Driven Ansible. Observa el log de la ejecución del rule book accediendo a *Rulebook Activations / Kafka Rulebook Activation / History* y pinchando sobre el job correspondiente que esté en estado "running". 
+Puedes explorar los distintos componentes desde la interfaz de Event-Driven Ansible. Observa el log de la ejecución del rulebook accediendo a *Rulebook Activations / Kafka Rulebook Activation / History* y pinchando sobre el job correspondiente que esté en estado "running". 
 Puedes observar el log y si haces scroll hasta abajo, deberías ver como un evento ha sido recibido y se ha enviado una llamada al Ansible Controller.
 
 image::eda_activations_log.png[]
